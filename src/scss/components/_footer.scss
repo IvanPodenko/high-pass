@@ -1,0 +1,178 @@
+.footer {
+  padding-top: 22px;
+  padding-bottom: 17px;
+  height: 106px;
+  background-color: var(--nero-color);
+
+  @include mobile {
+     height: 185px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0;
+      // height: 185px;
+      justify-content: space-between;
+    }
+  }
+
+  &__left {
+
+    grid-column: 1/5;
+
+    @include tablet {
+      grid-column: 1/4;
+    }
+
+    @include small-tablet {
+      grid-column: 1/4;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 62px;
+      margin-top: 37px;
+      background-color: var(--charcoal-color);
+    }
+
+    &-link {
+      @include mobile {
+        width: 171px;
+        height: 34px;
+      }
+
+      &-image {
+        @include mobile {
+          padding-top: 10px;
+          margin-left: 21px;
+          width: 125px;
+          height: 30px;
+        }
+      }
+    }
+
+    &-text {
+      padding-top: 5px;
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--whisper-color);
+
+      @include mobile {
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+  }
+
+  &__centre {
+    grid-column: 5/9;
+    max-width: 361px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--very-light-grey);
+
+    @include tablet {
+      grid-column: 4/7;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+
+    @include small-tablet {
+      grid-column: 4/7;
+    }
+  }
+
+  &__right {
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    grid-column: 11/13;
+
+    @include tablet {
+      grid-column: 7/9;
+    }
+
+    &-text {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--very-light-grey) ;
+    }
+
+    .social {
+
+      display: flex;
+      width: 161px;
+      justify-content: center;
+      align-items: center;
+
+      @include mobile {
+        padding-left: 18px;
+      }
+
+      &__item {
+        padding-right: 20px;
+        padding-top: 8px;
+      }
+
+      &__link {
+        outline: none;
+        fill: var(--very-light-grey);
+
+        &:hover .social__svg {
+          fill: var(--burnt-orange-color);
+        }
+
+        &:focus-visible .social__svg {
+          fill: var(--fiery-orange-color);
+        }
+
+        &:active .social__svg {
+          fill: var(--harley-davidson-orange);
+        }
+
+
+      }
+
+      &__svg {
+        width: 30px;
+        height: 30px;
+        transition: fill .3s ease-in-out;
+      }
+    }
+  }
+}
+
+
+
+
+
+
